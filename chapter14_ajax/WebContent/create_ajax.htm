@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script language="javascript" >
+		var xmlHttp;
+		function createXMLHttp() {         //判断当前使用的浏览器类型
+			if(window.XMLHttpRequest) {
+				xmlHttp = new XMLHttpRequest();
+			} else {
+				xmlHttp = new ActiveXObject("Microsoft.SMLHTTP")
+			}
+		}
+	</script>
+</body>
+</html>

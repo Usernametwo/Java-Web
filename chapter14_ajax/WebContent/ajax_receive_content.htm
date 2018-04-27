@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script language="javascript">
+		var xmlHttp;
+		function createHttp() {
+			if(window.XMLHttpRequest) {
+				xmlHttp = new XMLHttpRequest();
+			} else {
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP")
+			}
+		}
+		function showMsg() {
+			createHttp();              //建立xmlHttp对象
+			xmlHttp.open("post", "/chapter_14/content.htm");      //设置一个请求
+			//设置请求完成后的处理的回调函数
+			xmlHttp.onreadystatechange = showMsgCallback;
+			xmlHttp.send(null);                 //发送请求，不设置参数
+		}
+		function showMsgCallback() {                    //定义回调函数
+			if(xmlHttp.readyState == 4) {                    //数据返回完毕
+				if(xmlHttp.status == 200) {               //数据返回成功
+					var text = xmlHttp.responseText;
+					//设置要使用的样式表
+					//document.getElementById("msg").className = "样式表名称";
+					//设置msg标签元素中要显示的内容为Ajax接收的返回值内容
+					document.getElementById("msg").innerHTML = text;
+				}
+			}
+		}
+	</script>
+	<input type="button" onclick="showMsg()" value="调用Ajax显示内容" />
+	<span id="msg"></span>
+</body>
+</html>

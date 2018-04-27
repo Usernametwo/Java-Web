@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="getCity()">
+	<script language="javascript">
+		var xmlHttp;
+		function createHttp() {
+			if(window.XMLHttpRequest) {
+				xmlHttp = new XMLHttpRequest();
+			} else {
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP")
+			}
+		}
+		function getCity() {
+			createHttp();              //建立xmlHttp对象
+			xmlHttp.open("post", "allarea.xml");      //设置一个请求
+			//设置请求完成后的处理的回调函数
+			xmlHttp.onreadystatechange = getCityCallback;
+			xmlHttp.send(null);                 //发送请求，不设置参数
+		}
+		function getCityCallback() {
+			/*
+				这段代码所解析的xml文件必须为格式化过的xml文件
+			*/
+			if(xmlHttp.readyState == 4) {                    //数据返回完毕
+				if(xmlHttp.status == 200) {               //数据返回成功
+					var allarea = xmlHttp.responseXML.getElementsByTagName("allarea")[0].childNodes;
+					//取得下拉列表框的city对象
+					var select = document.getElementById("city");
+					select.length = 1;
+					select.options[0].selected = true;
+					alert("msg");
+					alert("allarea:" + allarea.length);
+					//循环all下面的子节点
+					for(var i = 0;i < allarea.length; i ++) {
+						var area = allarea[i];
+						//创建option元素
+						var option = document.createElement("option");
+						//取得area中的id元素
+						var id = area.getElementsByTagName('id')[0].firstChild.nodeValue;
+						//取得title元素
+						var title = area.getElementsByTagName('title')[0].firstChild.nodeValue;
+						alert("title : " + title)
+						option.setAttribute("value", id);
+						option.appendChild(document.createTextNode(title));
+						select.appendChild(option);
+					}
+				}
+			}
+		}
+	</script>
+	
+	<form action="" method="post">
+		请选择喜欢的城市：<select id="city">
+			<option value="0"> -请选择城市- </option>	
+		</select>
+	</form>
+</body>
+</html>

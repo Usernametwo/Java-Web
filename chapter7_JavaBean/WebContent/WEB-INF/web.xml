@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>chapter_7</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>  
+    <servlet-name>use_javabean_demo01</servlet-name>  
+    <jsp-file>/WEB-INF/use_javabean_demo01.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>use_javabean_demo01</servlet-name>  
+    <url-pattern>/use_javabean_demo01</url-pattern>  
+  </servlet-mapping> 
+
+  <servlet>  
+    <servlet-name>use_javabean_demo02</servlet-name>  
+    <jsp-file>/WEB-INF/use_javabean_demo02.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>use_javabean_demo02</servlet-name>  
+    <url-pattern>/use_javabean_demo02</url-pattern>  
+  </servlet-mapping> 
+    
+  <servlet>  
+    <servlet-name>input_demo</servlet-name>  
+    <jsp-file>/WEB-INF/input_demo.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>input_demo</servlet-name>  
+    <url-pattern>/input_demo</url-pattern>  
+  </servlet-mapping> 
+  
+  <servlet>  
+    <servlet-name>input_bean</servlet-name>  
+    <jsp-file>/WEB-INF/input_bean.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>input_bean</servlet-name>  
+    <url-pattern>/input_bean</url-pattern>  
+  </servlet-mapping> 
+  
+  <servlet>  
+    <servlet-name>page_bean01</servlet-name>  
+    <jsp-file>/WEB-INF/page_bean01.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>page_bean01</servlet-name>  
+    <url-pattern>/page_bean01</url-pattern>  
+  </servlet-mapping> 
+  
+  
+  <servlet>  
+    <servlet-name>page_bean02</servlet-name>  
+    <jsp-file>/WEB-INF/page_bean02.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>page_bean02</servlet-name>  
+    <url-pattern>/page_bean02</url-pattern>  
+  </servlet-mapping> 
+  
+  
+  <servlet>  
+    <servlet-name>request_bean01</servlet-name>  
+    <jsp-file>/WEB-INF/request_bean01.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>request_bean01</servlet-name>  
+    <url-pattern>/request_bean01</url-pattern>  
+  </servlet-mapping> 
+  
+  
+  <servlet>  
+    <servlet-name>request_bean02</servlet-name>  
+    <jsp-file>/WEB-INF/request_bean02.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>request_bean02</servlet-name>  
+    <url-pattern>/request_bean02</url-pattern>  
+  </servlet-mapping> 
+  
+  
+  <servlet>  
+    <servlet-name>index</servlet-name>  
+    <jsp-file>/WEB-INF/index.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>index</servlet-name>  
+    <url-pattern>/index</url-pattern>  
+  </servlet-mapping>   
+  
+  <servlet>  
+    <servlet-name>check</servlet-name>  
+    <jsp-file>/WEB-INF/check.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>check</servlet-name>  
+    <url-pattern>/check</url-pattern>  
+  </servlet-mapping> 
+  
+  <servlet>  
+    <servlet-name>success</servlet-name>  
+    <jsp-file>/WEB-INF/success.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>success</servlet-name>  
+    <url-pattern>/success</url-pattern>  
+  </servlet-mapping> 
+  
+  
+  <servlet>  
+    <servlet-name>emp_insert</servlet-name>  
+    <jsp-file>/WEB-INF/emp_insert.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>emp_insert</servlet-name>  
+    <url-pattern>/emp_insert</url-pattern>  
+  </servlet-mapping>  
+ 
+  <servlet>  
+    <servlet-name>emp_insert_do</servlet-name>  
+    <jsp-file>/WEB-INF/emp_insert_do.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>emp_insert_do</servlet-name>  
+    <url-pattern>/emp_insert_do</url-pattern>  
+  </servlet-mapping>  
+  
+  <servlet>  
+    <servlet-name>emp_list</servlet-name>  
+    <jsp-file>/WEB-INF/emp_list.jsp</jsp-file>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>emp_list</servlet-name>  
+    <url-pattern>/emp_list</url-pattern>  
+  </servlet-mapping>  
+  
+  
+</web-app>
